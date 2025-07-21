@@ -15,6 +15,10 @@ build/
 
 # Coverage and testing
 coverage/
+
 # Dev container + system stuff
 .devcontainer/.env
 .DS_Store
+
+# Others
+.cspellcache
