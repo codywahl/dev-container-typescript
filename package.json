@@ -11,22 +11,18 @@
     "lint:format": "prettier . --check --ignore-unknown",
     "lint:format-fix": "prettier . --write --ignore-unknown --cache",
     "lint:spellcheck": "cspell '**/*' --cache",
-    "lint:type-check": "tsc --noEmit",
+    "lint:type-check": "sh -c 'tsc --noEmit --project tsconfig.json'",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*": [
       "pnpm lint:format-fix",
       "pnpm lint:spellcheck",
       "pnpm lint:fix",
       "pnpm lint:type-check"
-    ],
-    "*.{md, json, txt}": [
-      "pnpm lint:format-fix",
-      "pnpm lint:spellcheck"
     ]
   },
   "keywords": [],

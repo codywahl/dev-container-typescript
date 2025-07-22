@@ -9,6 +9,7 @@ export default tseslint.config(
   tseslint.configs.recommendedTypeChecked,
 
   {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     languageOptions: {
       parserOptions: {
         // Ensure ESLint uses the correct tsconfig
